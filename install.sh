@@ -7,7 +7,7 @@ git clone git://git.freedesktop.org/git/poppler/poppler poppler
 git clone git://git.ghostscript.com/ghostpdl.git ghostpdl
 bzr branch http://bzr.linuxfoundation.org/openprinting/cups-filters cups-filters
 bzr branch http://bzr.openprinting.org/foomatic/foomatic-db foomatic-db
-wget http://downloads.sourceforge.net/project/gimp-print/gutenprint-5.2/5.2.11/gutenprint-5.2.11.tar.bz2 -O gutenprint
+wget http://downloads.sourceforge.net/project/gimp-print/gutenprint-5.2/5.2.11/gutenprint-5.2.11.tar.bz2 -O gutenprint-5.2.11.tar.bz2
 
 # start building
 
