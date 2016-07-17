@@ -98,7 +98,7 @@ echo "====================================================="
 # ghostscript
 echo "====================================================="
 echo "build ghostscript..."
-cd ghostpdl/gs
+cd ghostpdl
 sudo apt-get install libxt-dev
 ./autogen.sh
 ./configure
