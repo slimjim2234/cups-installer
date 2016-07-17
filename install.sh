@@ -21,7 +21,9 @@ sudo apt-get install \
     bzr \
     build-essential \
     git \
+    libtool \
     libxext-dev \
+    pkg-config \
     wget
     
 
@@ -101,7 +103,6 @@ echo "build ghostscript..."
 cd ghostpdl
 sudo apt-get install libxt-dev
 ./autogen.sh
-./configure
 make
 if [ $? -eq 0 ]
 then
@@ -116,8 +117,7 @@ echo "====================================================="
 echo "====================================================="
 echo "building cups-filters..."
 cd cups-filters
-autoconf
-./configure
+./autogen.sh
 make
 if [ $? -eq 0 ]
 then
