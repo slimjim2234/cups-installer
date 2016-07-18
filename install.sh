@@ -35,6 +35,7 @@ sudo apt-get install \
     libtool \
     libxext-dev \
     pkg-config \
+    sudo \
     wget
     
 
