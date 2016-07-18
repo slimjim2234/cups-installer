@@ -114,6 +114,7 @@ echo "build ghostscript..."
 cd ghostpdl
 sudo apt-get -y install libxt-dev
 ./autogen.sh
+./configure
 make
 if [ $? -eq 0 ]
 then
@@ -129,6 +130,7 @@ echo "====================================================="
 echo "building cups-filters..."
 cd cups-filters
 ./autogen.sh
+./configure
 make
 if [ $? -eq 0 ]
 then
@@ -205,6 +207,9 @@ echo "====================================================="
 mkdir ~/.go
 export GOROOT="/home/go"
 export GOPATH="/home/.go"
+
+# install cups cloud-print-connector
+go get github.com/google/cloud-print-connector/...
 
 # finished!
 echo "finished!!!"
