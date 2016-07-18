@@ -16,7 +16,7 @@ mkdir build
 cd build
 
 # create prerequisites
-sudo apt-get install \
+sudo apt-get -y install \
     autoconf \
     bzr \
     build-essential \
@@ -26,16 +26,15 @@ sudo apt-get install \
     libcurl4-gnutls-dev \
     libfontconfig1-dev \
     libfreetype6-dev \
-    libiconv-hook-dev
+    libiconv-hook-dev \
     libjpeg-dev \
     liblcms2-dev \
     libglib2.0-dev \
-    libpng-dev \ 
+    libpng-dev \
     libtiff5-dev \
     libtool \
     libxext-dev \
     pkg-config \
-    sudo \
     wget
     
 
@@ -113,7 +112,7 @@ echo "====================================================="
 echo "====================================================="
 echo "build ghostscript..."
 cd ghostpdl
-sudo apt-get install libxt-dev
+sudo apt-get -y install libxt-dev
 ./autogen.sh
 make
 if [ $? -eq 0 ]
@@ -162,7 +161,7 @@ echo "====================================================="
 echo "building gutenprint..."
 tar xvjf $GUTENPRINT
 cd gutenprint
-sudo apt-get install texlive-fonts-extra doxygen
+sudo apt-get -y install texlive-fonts-extra doxygen
 ./configure
 make
 if [ $? -eq 0 ]
