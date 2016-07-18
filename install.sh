@@ -2,6 +2,7 @@
 
 GUTENPRINT='gutenprint-5.2.11.tar.bz2'
 QPDFBUILD=0
+LIBICONVBUILD=0
 POPPLERBUILD=0
 CUPSBUILD=0
 CUPSFILTERSBUILD=0
@@ -41,6 +42,7 @@ sudo apt-get -y install \
 
 # get the latest software
 git clone https://github.com/qpdf/qpdf.git qpdf
+git clone git://git.savannah.gnu.org/libiconv.git libiconv
 git clone https://github.com/apple/cups.git cups-2.2
 git clone git://git.freedesktop.org/git/poppler/poppler poppler
 git clone git://git.ghostscript.com/ghostpdl.git ghostpdl
@@ -71,6 +73,23 @@ sudo make install
 cd ..
 echo "qpdf build complete!"
 echo "====================================================="
+
+# iconv
+echo "====================================================="
+echo "building iconv..."
+cd libiconv
+./autogen.sh
+./configure 
+make
+if [ $? -eq 0 ]
+then
+  $LIBICONVBUILD=1
+fi
+sudo make install
+cd ..
+echo "iconv build complete!"
+echo "====================================================="
+
 
 # poppler
 echo "====================================================="
@@ -219,6 +238,7 @@ echo "finished!!!"
 echo "====================================================="
 echo "Build Summary\n\n"
 echo "qpdf: $QPDFBUILD"
+echo "libiconv: $LIBICONVBUILD"
 echo "poppler: $POPPLERBUILD"
 echo "cups: $CUPSBUILD"
 echo "ghostcript: $GHOSTSCRIPTBUILD"
