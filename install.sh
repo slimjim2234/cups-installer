@@ -20,6 +20,7 @@ sudo apt-get -y install \
     autoconf \
     bzr \
     build-essential \
+    dialog \
     git \
     libavahi-client-dev \
     libavahi-glib-dev \
