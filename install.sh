@@ -21,6 +21,17 @@ sudo apt-get install \
     bzr \
     build-essential \
     git \
+    libavahi-client-dev \
+    libavahi-glib-dev \
+    libcurl4-gnutls-dev \
+    libfontconfig1-dev \
+    libfreetype6-dev \
+    libiconv-hook-dev
+    libjpeg-dev \
+    liblcms2-dev \
+    libglib2.0-dev \
+    libpng-dev \ 
+    libtiff5-dev \
     libtool \
     libxext-dev \
     pkg-config \
